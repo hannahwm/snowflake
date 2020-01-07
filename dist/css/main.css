@@ -1,0 +1,63 @@
+/*! project-name v0.0.1 | (c) 2020 YOUR NAME | MIT License | http://link-to-your-git-repo.com */
+/**
+ * @section Base Styles
+ */
+/* line 5, src/sass/components/_base.scss */
+body {
+  margin: 0 auto;
+}
+
+/* line 9, src/sass/components/_base.scss */
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+/* line 22, src/sass/components/_base.scss */
+.canvas-wrapper {
+  position: relative;
+  width: 610px;
+  height: 610px;
+  margin-bottom: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #000;
+}
+
+/* line 34, src/sass/components/_base.scss */
+.canvas-wrapper canvas {
+  background-image: url("/images/divider.png");
+  background-position: center;
+}
+
+/* line 40, src/sass/components/_base.scss */
+.divider {
+  position: absolute;
+  z-index: 9999;
+  top: -5px;
+  left: -5px;
+}
+
+/* line 47, src/sass/components/_base.scss */
+#save {
+  display: block;
+  border: 0;
+  background-color: #000;
+  border-radius: 3px;
+  padding: 10px;
+  color: #fff;
+  width: 300px;
+  margin: 0 auto;
+  font-family: "akkurat";
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* line 60, src/sass/components/_base.scss */
+#save:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
