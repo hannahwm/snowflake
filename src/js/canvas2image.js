@@ -44,7 +44,12 @@ var Canvas2Image = function () {
 	}
 
 	function saveFile (strData) {
-		document.location.href = strData;
+    var link = document.createElement("a");
+    link.download = 'snowflake.jpg';
+    link.href = strData;
+    link.click();
+
+		// document.location.href = strData;
 	}
 
 	function genImage(strData) {

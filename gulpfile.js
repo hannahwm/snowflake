@@ -10,6 +10,7 @@ var settings = {
 	styles: true,
 	svgs: true,
 	copy: true,
+  images: true,
 	reload: true
 };
 
@@ -37,6 +38,10 @@ var paths = {
 	copy: {
 		input: 'src/copy/**/*',
 		output: 'dist/'
+	},
+	images: {
+		input: 'src/images/**/*',
+		output: 'dist/interactive/2020/01/snowflake/images/'
 	},
 	reload: './dist/'
 };
@@ -237,6 +242,18 @@ var copyFiles = function (done) {
 
 };
 
+// Copy images into output folder
+var copyImages = function (done) {
+
+	// Make sure this feature is activated before running
+	if (!settings.images) return done();
+
+	// Copy images
+	return src(paths.images.input)
+		.pipe(dest(paths.images.output));
+
+};
+
 // Watch for changes to the src directory
 var startServer = function (done) {
 
@@ -282,7 +299,8 @@ exports.default = series(
 		lintScripts,
 		buildStyles,
 		buildSVGs,
-		copyFiles
+		copyFiles,
+    copyImages
 	)
 );
 

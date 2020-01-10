@@ -4,6 +4,8 @@
 
 body {
 	margin: 0 auto;
+	background: rgb(8,77,132);
+	background: linear-gradient(0deg, rgba(8,77,132,1) 0%, rgba(29,47,92,1) 100%);
 }
 
 input,
@@ -13,26 +15,73 @@ button {
 	font: inherit;
 }
 
+.content-wrapper {
+	background: url("/interactive/2020/01/snowflake/images/snowflakes.png") no-repeat top 90px center;
+	background-size: 100% auto;
+}
+
+.article-content {
+    background: url("/interactive/2020/01/snowflake/images/snow.png") no-repeat bottom -9.1vw center;
+    background-size: 100% auto;
+}
+
+.article-footer-recirc {
+	background: url("/interactive/2020/01/snowflake/images/snow.png") no-repeat top -3vw center #000;
+  background-size: 100% auto;
+}
+
 .snowflake-wrapper {
-	// width: 610px;
-	// margin: 0 auto;
-	// padding-top: 200px;
+	width: 300px;
+	margin: 0 auto;
+	padding-top: 200px;
+	padding-bottom: 100px;
+
+	@media screen and (min-width: 440px) {
+		width: 400px;
+		padding-top: 230px;
+	}
+
+	@media screen and (min-width: 640px) {
+		width: 600px;
+		padding-top: 320px;
+	}
+
+	p {
+		color: #fff;
+		font-family: "akkurat";
+		font-size: 16px;
+		line-height: 1.5em;
+
+		&:last-of-type {
+			margin-bottom: 65px;
+		}
+	}
 }
 
 .canvas-wrapper {
 	position: relative;
 	// float: left;
 	// border: 5px solid #ff0000;
-  width: 610px;
-	height: 610px;
-	margin-bottom: 40px;
+	width: 300px;
+	height: 300px;
+	margin-bottom: 20px;
 	border-radius: 50%;
 	overflow: hidden;
   box-sizing: border-box;
-	background-color: #000;
+	background-color: #548bb9;
+
+	@media screen and (min-width: 440px) {
+		width: 400px;
+		height: 400px;
+	}
+
+	@media screen and (min-width: 640px) {
+		width: 600px;
+		height: 600px;
+	}
 
 	canvas {
-		background-image: url("/images/divider.png");
+		background-image: url("/interactive/2020/01/snowflake/images/divider.png");
 		background-position: center;
 	}
 }
@@ -49,15 +98,47 @@ button {
 	border: 0;
 	background-color: #000;
 	border-radius: 3px;
-	padding: 10px;
+	padding: 10px 20px;
 	color: #fff;
 	width: 300px;
 	margin: 0 auto;
 	font-family: "akkurat";
 	font-size: 16px;
 	cursor: pointer;
+	outline: none;
+
+	@media screen and (min-width: 440px) {
+	}
+
+	@media screen and (min-width: 640px) {
+	}
 
 	&:hover {
 		background-color: rgba(0,0,0,0.8);
+	}
+}
+
+#undo {
+}
+
+#undo,
+#clear {
+	display: block;
+	width: 140px;
+	margin: 0 auto 20px;
+	border: 0;
+	background-color: #c1c1c1;
+	border-radius: 3px;
+	padding: 10px;
+	color: #fff;
+	font-family: "akkurat";
+	font-size: 16px;
+	cursor: pointer;
+	outline: none;
+
+	@media screen and (min-width: 440px) {
+	}
+
+	@media screen and (min-width: 640px) {
 	}
 }

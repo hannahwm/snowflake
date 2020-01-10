@@ -5,9 +5,12 @@
 /* line 5, src/sass/components/_base.scss */
 body {
   margin: 0 auto;
+  background: #084d84;
+  background: -webkit-gradient(linear, left bottom, left top, from(#084d84), to(#1d2f5c));
+  background: linear-gradient(0deg, #084d84 0%, #1d2f5c 100%);
 }
 
-/* line 9, src/sass/components/_base.scss */
+/* line 11, src/sass/components/_base.scss */
 input,
 textarea,
 select,
@@ -15,26 +18,97 @@ button {
   font: inherit;
 }
 
-/* line 22, src/sass/components/_base.scss */
+/* line 18, src/sass/components/_base.scss */
+.content-wrapper {
+  background: url("/interactive/2020/01/snowflake/images/snowflakes.png") no-repeat top 90px center;
+  background-size: 100% auto;
+}
+
+/* line 23, src/sass/components/_base.scss */
+.article-content {
+  background: url("/interactive/2020/01/snowflake/images/snow.png") no-repeat bottom -9.1vw center;
+  background-size: 100% auto;
+}
+
+/* line 28, src/sass/components/_base.scss */
+.article-footer-recirc {
+  background: url("/interactive/2020/01/snowflake/images/snow.png") no-repeat top -3vw center #000;
+  background-size: 100% auto;
+}
+
+/* line 33, src/sass/components/_base.scss */
+.snowflake-wrapper {
+  width: 300px;
+  margin: 0 auto;
+  padding-top: 200px;
+  padding-bottom: 100px;
+}
+
+@media screen and (min-width: 440px) {
+  /* line 33, src/sass/components/_base.scss */
+  .snowflake-wrapper {
+    width: 400px;
+    padding-top: 230px;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  /* line 33, src/sass/components/_base.scss */
+  .snowflake-wrapper {
+    width: 600px;
+    padding-top: 320px;
+  }
+}
+
+/* line 49, src/sass/components/_base.scss */
+.snowflake-wrapper p {
+  color: #fff;
+  font-family: "akkurat";
+  font-size: 16px;
+  line-height: 1.5em;
+}
+
+/* line 55, src/sass/components/_base.scss */
+.snowflake-wrapper p:last-of-type {
+  margin-bottom: 65px;
+}
+
+/* line 61, src/sass/components/_base.scss */
 .canvas-wrapper {
   position: relative;
-  width: 610px;
-  height: 610px;
-  margin-bottom: 40px;
+  width: 300px;
+  height: 300px;
+  margin-bottom: 20px;
   border-radius: 50%;
   overflow: hidden;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-color: #000;
+  background-color: #548bb9;
 }
 
-/* line 34, src/sass/components/_base.scss */
+@media screen and (min-width: 440px) {
+  /* line 61, src/sass/components/_base.scss */
+  .canvas-wrapper {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  /* line 61, src/sass/components/_base.scss */
+  .canvas-wrapper {
+    width: 600px;
+    height: 600px;
+  }
+}
+
+/* line 83, src/sass/components/_base.scss */
 .canvas-wrapper canvas {
-  background-image: url("/images/divider.png");
+  background-image: url("/interactive/2020/01/snowflake/images/divider.png");
   background-position: center;
 }
 
-/* line 40, src/sass/components/_base.scss */
+/* line 89, src/sass/components/_base.scss */
 .divider {
   position: absolute;
   z-index: 9999;
@@ -42,22 +116,40 @@ button {
   left: -5px;
 }
 
-/* line 47, src/sass/components/_base.scss */
+/* line 96, src/sass/components/_base.scss */
 #save {
   display: block;
   border: 0;
   background-color: #000;
   border-radius: 3px;
-  padding: 10px;
+  padding: 10px 20px;
   color: #fff;
   width: 300px;
   margin: 0 auto;
   font-family: "akkurat";
   font-size: 16px;
   cursor: pointer;
+  outline: none;
 }
 
-/* line 60, src/sass/components/_base.scss */
+/* line 116, src/sass/components/_base.scss */
 #save:hover {
   background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* line 124, src/sass/components/_base.scss */
+#undo,
+#clear {
+  display: block;
+  width: 140px;
+  margin: 0 auto 20px;
+  border: 0;
+  background-color: #c1c1c1;
+  border-radius: 3px;
+  padding: 10px;
+  color: #fff;
+  font-family: "akkurat";
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
 }

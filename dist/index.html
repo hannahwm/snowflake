@@ -5,17 +5,24 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="js/canvas2image.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 </head>
 <body>
-	<div class="snowflake-wrapper">
-		<div class="canvas-wrapper">
-			<!-- <img class="divider" src="/images/divider.png" /> -->
-			<canvas id="canvas" width="600" height="600">
-				Your browser does not support canvas
-			</canvas>
-		</div>
-		<button id="save">Download your snowflake</button>
-	</div>
+	<main id="content" class="content-wrapper">
+		<section class="article-content" id="article-content">
+			<div class="snowflake-wrapper">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a odio ut nisi vulputate congue. Proin in interdum enim, eu posuere libero. Phasellus eget posuere massa. Sed cursus venenatis orci, ut volutpat massa faucibus eget. Donec imperdiet bibendum erat, at consequat velit luctus a. Ut consectetur, massa eu convallis placerat, lectus diam vestibulum nisl, vitae cursus nibh lacus at tortor. In fringilla pharetra neque nec efficitur.</p>
+				<button id="clear">Clear canvas</button>
+				<div class="canvas-wrapper">
+					<canvas id="canvas" width="600" height="600">
+						Your browser does not support canvas
+					</canvas>
+				</div>
+				<button id="undo">Undo</button>
+				<button id="save">Download your snowflake</button>
+			</div>
+		</section>
+	</main>
 
 
 	<!-- Scripts -->
